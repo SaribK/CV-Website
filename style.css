@@ -418,6 +418,42 @@ section .title::after{
     background: crimson!important;
 }
 
+/* social-media icons styling */
+.social-icons
+{
+    top: 50%;
+    transform: translateY(-150%);
+    position: sticky;
+    z-index: 1;
+    width: 80px;
+}
+.social-icons ul
+{
+    padding: initial;
+}
+.social-icons ul li
+{
+    height: 40px;
+    width: 40px;
+    list-style-type: none;
+    padding-left: 12px;
+    padding-top: 6px;
+    margin-top: 5px;
+    color: #fff;
+    background-color: crimson;
+}
+
+.social-icons ul li i{
+    margin-top: 5px;
+}
+
+.social-icons ul li:hover
+{
+    padding-left: 30px;
+    width: 80px;
+    transition: 1s;
+}
+
 /* responsive media query start */
 @media (max-width: 1300px){
     .home .max-width{
@@ -520,6 +556,20 @@ section .title::after{
     .services .serv-content .card{
         width: 100%;
     }
+    .social-icons ul li{
+        width: 10%;
+        padding-left: 0px;
+    }
+    .social-icons ul li i{
+        visibility: hidden;
+    }
+    .social-icons ul li:hover{
+        width: 50%;
+        padding-left: 15px;
+    }
+    .social-icons ul li:hover i{
+        animation: showBlock 0s 0.2s forwards;
+    }
 }
 
 @media (max-width: 500px){
@@ -530,4 +580,9 @@ section .title::after{
     .home .home-content .text-3{
         font-size: 27px;
     }
+}
+
+/* animations start */
+@keyframes showBlock {
+    to { visibility: visible; }
 }
