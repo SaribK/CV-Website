@@ -140,12 +140,12 @@ section{
     padding: 100px 0;
 }
 
-.about, .services, .skills, .teams, .contact{
+.about, .experiences, .skills, .teams, .contact{
     font-family: 'Poppins', sans-serif;
 }
 
 .about .about-content,
-.services .serv-content,
+.experiences .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -239,23 +239,23 @@ section .title::after{
 }
 
 /* services section styling */
-.services, .teams{
+.experiences, .teams{
     color: #fff;
     background: #111;
 }
 
-.services .title::before,
+.experiences .title::before,
 .teams .title::before{
     background: #fff;
 }
 
-.services .title::after,
+.experiences .title::after,
 .teams .title::after{
     background: #111;
-    content: "what i provide";
+    content: "where i learned";
 }
 
-.services .serv-content .card{
+/* .services .serv-content .card{
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -291,6 +291,78 @@ section .title::after{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+} */
+
+
+
+
+
+.experiences
+{
+    margin-top: -50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.experiences h3
+{
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.experiences .serv-content .column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.timeline
+{
+    list-style-type: none;
+    position: relative;
+}
+.timeline:before
+{
+    content: '';
+    background: crimson;
+    display: inline-block;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+}
+.timeline li
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.timeline li h4
+{
+    background-color: crimson;
+    padding: 5px 0 5px 20px;
+    color: #fff;
+    font-size: 15px;
+}
+.timeline li h4 span
+{
+    font-weight: bold;
+    color: #ccc;
+}
+.timeline li:before
+{
+    content: '';
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid crimson;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+.timeline li p{
+    margin-top: 10px;
 }
 
 /* skills section styling */
@@ -348,7 +420,7 @@ section .title::after{
 
 /* teams section styling */
 .teams .title::after{
-    content: "who's with me";
+    content: "what i created";
 }
 
 .teams .carousel .card{
@@ -569,6 +641,9 @@ section .title::after{
     }
     .social-icons ul li:hover i{
         animation: showBlock 0s 0.2s forwards;
+    }
+    .experiences .serv-content .column{
+        width: 100%;
     }
 }
 
