@@ -72,7 +72,7 @@ html{
 }
 
 .navbar.sticky .menu li a:hover{
-    color: #fff;
+    color: gray;
 }
 
 /* menu btn styling */
@@ -131,7 +131,6 @@ html{
 }
 
 .home .home-content a:hover{
-    color: #fff;
     background: none;
 }
 
@@ -255,54 +254,6 @@ section .title::after{
     content: "where i learned";
 }
 
-/* .services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 20px 25px;
-    cursor: pointer;
-}
-
-.services .serv-content .card:hover{
-    background: crimson;
-}
-
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-
-
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-} */
-
-
-
-
-
-.experiences
-{
-    margin-top: -50px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-}
 .experiences h3
 {
     font-size: 25px;
@@ -363,6 +314,23 @@ section .title::after{
 }
 .timeline li p{
     margin-top: 10px;
+}
+
+.experiences .serv-content .fixed-button{
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.experiences .serv-content .fixed-button:hover{
+    background: none;
 }
 
 /* skills section styling */

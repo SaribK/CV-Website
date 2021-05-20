@@ -49,4 +49,18 @@ $(document).ready(function(){
             }
         }
     });
+
+    document.getElementById('certifications').style.display = 'none';
+    document.getElementById('volunteer').style.display = 'none';
+
+    $(".fixed-button").click(function()
+    {
+        $(".fixed-button").fadeOut(function () { //toggle button text
+            $(".fixed-button").text(($(".fixed-button").text() == 'Next') ? 'Previous' : 'Next').fadeIn();
+        })
+        $(".education").slideToggle(1000); //toggle between education/work and volunteer/certifications
+        $(".work").slideToggle(1000);
+        $(".volunteer").slideToggle(1000);
+        $(".certifications").slideToggle(1000);
+    });
 });
