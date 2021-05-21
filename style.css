@@ -338,51 +338,14 @@ section .title::after{
     content: "what i know";
 }
 
-.skills .skills-content .column{
-    width: calc(50% - 30px);
-}
-
-.skills .skills-content .left .text{
-    font-size: 25px;
+.skills .skills-content .text{
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    margin-left: -20px;
 }
 
-.skills .skills-content .left p{
-    text-align: justify;
-}
-
-.skills .skills-content .left a{
-    display: inline-block;
-    background: crimson;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-
-.skills .skills-content .left a:hover{
-    color: crimson;
-    background: none;
-}
-
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.skills .skills-content .right span{
-    font-weight: 500;
+.skills .skills-content .skill-list{
     font-size: 18px;
 }
 
@@ -499,19 +462,35 @@ section .title::after{
     .home .max-width{
         margin-left: 0px;
     }
+    
 }
-
+@media (max-width: 1250px){
+    .skills .skills-content .column{
+        width: 25%;
+        margin-bottom: 35px;
+    }
+}
 @media (max-width: 1104px){
     .about .about-content .left img{
         height: 350px;
         width: 350px;
     }
+    .skills .skills-content .column{
+        width: 30%;
+        margin-bottom: 35px;
+        margin-left: 25px;
+    }
+    /* .skills .skills-content .column .one,
+    .skills .skills-content .column .four{
+        margin-left: 200px;
+    } */
 }
 
 @media (max-width: 991px){
     .max-width{
         padding: 0 50px;
     }
+    
 }
 
 @media (max-width: 947px){
@@ -573,10 +552,10 @@ section .title::after{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    .skills .skills-content .column{
+    /* .skills .skills-content .column{
         width: 100%;
         margin-bottom: 35px;
-    }
+    } */
 }
 
 @media (max-width: 690px){
@@ -613,6 +592,7 @@ section .title::after{
     .experiences .serv-content .column{
         width: 100%;
     }
+    
 }
 
 @media (max-width: 500px){
