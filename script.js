@@ -63,4 +63,32 @@ $(document).ready(function(){
         $(".volunteer").slideToggle(1000);
         $(".certifications").slideToggle(1000);
     });
+
+    $('#proj1').click(function() {
+        $(".navbar").hide();
+        //300ms delay then do next step
+        document.getElementById("popup-1").style.width = "100%";
+        //disable scrolling when popup is shown
+        disableScroll();
+
+
+        //TODO maybe add a popup effect
+    });
 });
+
+function hidePopup1() {
+    document.getElementById("popup-1").style.width = "0%";
+    $(".navbar").show();
+    enableScroll();
+}
+
+
+//disable scrolling
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+    document.querySelector('html').scrollTop = window.scrollY;
+}
+    
+function enableScroll() {
+    document.body.style.overflow = null;
+}

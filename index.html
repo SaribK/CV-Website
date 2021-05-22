@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="max-width">
@@ -255,7 +256,7 @@
         <div class="max-width">
             <h2 class="title">My projects</h2>
             <div class="carousel owl-carousel">
-                <div class="card">
+                <div class="card" id="proj1">
                     <div class="box">
                         <img src="" alt="">
                         <div class="text">Expense Management</div>
@@ -342,6 +343,16 @@
             </div>
         </div>
     </section>
+
+    <!-- popups for each project -->
+    <div class="popup" id="popup-1">
+      <!-- <div class="overlay"></div> -->
+      <div class="content">
+        <div class="close-btn" onclick="hidePopup1()">&times;</div>
+        <h1>Expense Management</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rem accusamus molestias quae ipsum cumque harum iusto corrupti in exercitationem repellat quia reprehenderit illo sapiente accusantium, excepturi blanditiis necessitatibus porro?</p>
+      </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
