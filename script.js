@@ -31,7 +31,6 @@ $(document).ready(function(){
     // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
-        loop: true,
         autoplayTimeOut: 2000,
         autoplayHoverPause: true,
         responsive: {
@@ -64,20 +63,33 @@ $(document).ready(function(){
         $(".certifications").slideToggle(1000);
     });
 
-    $('#proj1').click(function() {
-        $(".navbar").hide();
-        //300ms delay then do next step
-        document.getElementById("popup-1").style.width = "100%";
-        //disable scrolling when popup is shown
-        disableScroll();
+    $('.card').on('click', function(event){
+        var $this = $(this);
 
-
-        //TODO maybe add a popup effect
-    });
+        // project 1
+        if ($this.hasClass('proj1')) {
+            $(".navbar").hide();
+            document.getElementById("popup-1").style.width = "100%";
+            disableScroll();
+            //TODO maybe add a popup effect
+        }
+        else if ($this.hasClass('proj2')) {
+            $(".navbar").hide();
+            document.getElementById("popup-2").style.width = "100%";
+            disableScroll();
+            //TODO maybe add a popup effect
+        }
+      });
 });
 
 function hidePopup1() {
     document.getElementById("popup-1").style.width = "0%";
+    $(".navbar").show();
+    enableScroll();
+}
+
+function hidePopup2() {
+    document.getElementById("popup-2").style.width = "0%";
     $(".navbar").show();
     enableScroll();
 }
