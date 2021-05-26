@@ -384,10 +384,6 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
-.teams .carousel .card .box p{
-
-}
-
 .owl-dots{
     text-align: center;
     margin-top: 20px;
@@ -433,9 +429,9 @@ section .title::after{
     background:#fff;
     width:95%;
     max-width:500px;
-    height:250px;
+    height:275px;
     z-index:2;
-    text-align:center;
+    text-align:justify;
     padding:20px;
     box-sizing:border-box;
     font-family:"Open Sans",sans-serif;
@@ -443,6 +439,11 @@ section .title::after{
 }
 
 .popup h1{
+    margin: 20px;
+    text-align: center;
+}
+
+.popup p{
     margin: 20px;
 }
  
