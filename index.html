@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
 
@@ -38,7 +39,7 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Sarib Kashif</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <a href="#contact">Contact me</a>
             </div>
         </div>
     </section>
@@ -218,7 +219,7 @@
                   <li class="skill-list">jQuery</li>
                   <li class="skill-list">GitHub, GitLab, Git</li>
                   <li class="skill-list">Bash</li>
-                  <li class="skill-list">Unity, Linux, Windows</li>
+                  <li class="skill-list">Unix, Linux, Windows</li>
                   <li class="skill-list">Nano</li>
                   <li class="skill-list">Django</li>
                 </ul>
@@ -493,7 +494,7 @@
           <h2 class="title">Contact me</h2>
               <!-- <p class="text">Thanks for visiting! <br> Feel free to reach out to me</p> -->
     
-              <div class="row">
+              <!-- <div class="row">
     
                 <div class="column">
                   <i class="fa fa-phone"></i>
@@ -505,11 +506,96 @@
                   <p>kashifsar01@gmail.com</p>
                 </div>
     
-              </div>
+              </div> -->
+
+              <div class="form-container">
+                <form name="frmContact" method="post"
+                    action="contact.php" enctype="multipart/form-data"
+                    onsubmit="return validateContactForm()">
+        
+                    <div class="input-row">
+                        <label style="padding-top: 20px;">Name</label> <span
+                            id="userName-info" class="info"></span><br /> <input
+                            type="text" class="input-field" name="userName"
+                            id="userName" />
+                    </div>
+                    <div class="input-row">
+                        <label>Email</label> <span id="userEmail-info"
+                            class="info"></span><br /> <input type="text"
+                            class="input-field" name="userEmail" id="userEmail" />
+                    </div>
+                    <div class="input-row">
+                        <label>Subject</label> <span id="subject-info"
+                            class="info"></span><br /> <input type="text"
+                            class="input-field" name="subject" id="subject" />
+                    </div>
+                    <div class="input-row">
+                        <label>Message</label> <span id="userMessage-info"
+                            class="info"></span><br />
+                        <textarea name="content" id="content"
+                            class="input-field" cols="60" rows="6"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" name="send" class="btn-submit"
+                            value="Send" />
+        
+                        <div id="statusMessage"> 
+                                <?php
+                                if (! empty($message)) {
+                                    ?>
+                                    <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                                <?php
+                                }
+                                ?>
+                            </div>
+                    </div>
+                </form>
+            </div>
+           
         </div>
     </section>
 
+    <script type="text/javascript">
+      function validateContactForm() {
+          var valid = true;
 
+          $(".info").html("");
+          $(".input-field").css('border', '#e0dfdf 1px solid');
+          var userName = $("#userName").val();
+          var userEmail = $("#userEmail").val();
+          var subject = $("#subject").val();
+          var content = $("#content").val();
+          
+          if (userName == "") {
+              $("#userName-info").html("Required.");
+              $("#userName").css('border', '#e66262 1px solid');
+              valid = false;
+          }
+          if (userEmail == "") {
+              $("#userEmail-info").html("Required.");
+              $("#userEmail").css('border', '#e66262 1px solid');
+              valid = false;
+          }
+          if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/))
+          {
+              $("#userEmail-info").html("Invalid Email Address.");
+              $("#userEmail").css('border', '#e66262 1px solid');
+              valid = false;
+          }
+
+          if (subject == "") {
+              $("#subject-info").html("Required.");
+              $("#subject").css('border', '#e66262 1px solid');
+              valid = false;
+          }
+          if (content == "") {
+              $("#userMessage-info").html("Required.");
+              $("#content").css('border', '#e66262 1px solid');
+              valid = false;
+          }
+          return valid;
+      }
+</script>
 
     <script src="script.js"></script>
 </body>
