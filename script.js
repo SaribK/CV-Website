@@ -15,14 +15,14 @@ $(document).ready(function(){
 
     // typing animation script
     var typed = new Typed(".typing", {
-        strings: ["Computer Scientist", "Web Designer", "App Developer"],
+        strings: ["Computer Scientist", "Web Developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Computer Scientist", "Web Designer", "App Developer"],
+        strings: ["Computer Scientist", "Web Developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -71,7 +71,6 @@ $(document).ready(function(){
             $(".navbar").hide();
             document.getElementById("popup-1").style.width = "100%";
             disableScroll();
-            //TODO maybe add a popup effect
         }
         else if ($this.hasClass('proj2')) {
             $(".navbar").hide();
