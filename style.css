@@ -467,7 +467,7 @@ section .title::after{
 .social-icons
 {
     top: 50%;
-    transform: translateY(-150%);
+    transform: translateY(-50%);
     position: sticky;
     z-index: 1;
     width: 80px;
@@ -503,12 +503,6 @@ section .title::after{
 .contact .title::after{
     content: "reach out to me";
 }
-
-/* .contact .column{
-    float: left;
-    width: 50%;
-    text-align: center;
-} */
 
 .contact{
     text-align: center;
@@ -679,7 +673,9 @@ form .submit:hover{
     .experiences .serv-content .column{
         width: 100%;
     }
-    
+    .form-control{
+        width: 460px;
+    }
 }
 
 @media (max-width: 500px){
@@ -689,6 +685,10 @@ form .submit:hover{
     
     .home .home-content .text-3{
         font-size: 27px;
+    }
+
+    .form-control{
+        width: 300px;
     }
 }
 
