@@ -137,6 +137,11 @@ $(document).ready(function(){
             document.getElementById("popup-14").style.width = "100%";
             disableScroll();
         }
+        else if ($this.hasClass('proj15')) {
+            $(".navbar").hide();
+            document.getElementById("popup-15").style.width = "100%";
+            disableScroll();
+        }
       });
 });
 
@@ -220,6 +225,12 @@ function hidePopup13() {
 
 function hidePopup14() {
     document.getElementById("popup-14").style.width = "0%";
+    $(".navbar").show();
+    enableScroll();
+}
+
+function hidePopup15() {
+    document.getElementById("popup-15").style.width = "0%";
     $(".navbar").show();
     enableScroll();
 }
